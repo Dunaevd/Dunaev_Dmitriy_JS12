@@ -1,4 +1,4 @@
-let money = 23000, income = 'фриланс', addExpenses = 'Интернет, Такси, Коммуналка', deposit = Boolean('myCash'),
+let money = 23000, income = 'фриланс', addExpenses = 'Интернет, Такси, Коммуналка', deposit = true,
  mission = 200000, period = 12;
  
  console.log(typeof money, typeof income, typeof deposit);
@@ -9,13 +9,15 @@ let money = 23000, income = 'фриланс', addExpenses = 'Интернет, �
 
  console.log('Цель заработать' + ' ' + mission + ' ' + 'рублей');
 
- console.log(addExpenses.toLowerCase());
+//  console.log(addExpenses.toLowerCase());
 
- let arr = addExpenses.split(',');
+//  let arr = addExpenses.split(',');
 
- console.log(arr);
+//  console.log(arr);
 
- console.log(arr[0].toLowerCase(), arr[1].toLowerCase(), arr[2].toLowerCase());
+//  console.log(arr[0].toLowerCase(), arr[1].toLowerCase(), arr[2].toLowerCase());
+
+console.log(addExpenses.toLowerCase().split(', '));
  
  let budgetDay = money / 30;
 
