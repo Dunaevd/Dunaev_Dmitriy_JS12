@@ -55,18 +55,18 @@ console.log('Дневной бюджет: ', Math.floor(budgetDay));
 
 
 switch (true){
+    case budgetDay >= 0 && budgetDay < 600:
+        console.log('К сожалению у вас уровень дохода ниже среднего'); 
+        break;
+    case budgetDay >= 600 && budgetDay < 1200:
+        console.log('У вас средний уровень дохода');  
+        break;  
     case budgetDay >= 1200:
-        console.log('У вас высокий уровень');
+        console.log('У вас высокий уровень дохода');
         break;
-    case 600 < budgetDay < 1200:
-        console.log('У вас средний уровень дохода');
+    case budgetDay < 0:
+        console.log('Что то пошло не так');
         break;
-    case 0 < budgetDay <= 600:
-        console.log('К сожалению у вас уровень дохода ниже среднего');
-        break;
-    case budgetDay <= 0:
-        console.log('Что то пошло не так'); 
-        break;   
 }
 
 
