@@ -1,7 +1,9 @@
+// 'use strict'
+
 let money = 23000, income = 'фриланс', addExpenses = 'Интернет, Такси, Коммуналка', deposit = true,
  mission = 200000, period = 12;
  
- console.log(typeof money, typeof income, typeof deposit);
+ console.log(typeof money, typeof income,  typeof deposit);
 
  console.log(addExpenses.length);
 
@@ -18,7 +20,5 @@ let money = 23000, income = 'фриланс', addExpenses = 'Интернет, �
 //  console.log(arr[0].toLowerCase(), arr[1].toLowerCase(), arr[2].toLowerCase());
 
 console.log(addExpenses.toLowerCase().split(', '));
- 
- let budgetDay = money / 30;
 
- console.log('Дневной бюджет ' + budgetDay);
+ 
