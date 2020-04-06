@@ -1,4 +1,4 @@
-'use strict'
+"use strict"
 
 let income = 'фриланс',
  mission = 200000, period = 12;
