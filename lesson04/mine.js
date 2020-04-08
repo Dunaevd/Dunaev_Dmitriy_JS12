@@ -1,23 +1,39 @@
 "use strict";
 
+let showTypeOf = (n) => console.log(typeof(n));
+
 let income = 'фриланс',
  mission = 200000, period = 12;
 
 let money = prompt('Ваш месячный доход');
 
+showTypeOf(money);
+
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+
+showTypeOf(addExpenses);
 
 console.log(addExpenses.split(', '));
 
 let deposit = confirm('Есть ли у вас депозит в банке?');
 
+showTypeOf(deposit);
+
 let expenses1 = prompt('Введите обязательную статью расходов?');
+
+showTypeOf(expenses1);
 
 let amount1 = prompt('Во сколько это обойдется?');
 
+showTypeOf(amount1);
+
 let expenses2 = prompt('Введите обязательную статью расходов?');
 
+showTypeOf(expenses2);
+
 let amount2 = prompt('Во сколько это обойдется?');
+
+showTypeOf(amount2);
 
 let getExpensesMonth = () => +amount1  + +amount2; //Сумма робязательных расходов за месяц
 
