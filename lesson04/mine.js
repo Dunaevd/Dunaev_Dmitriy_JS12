@@ -29,7 +29,7 @@ let amount2 = prompt('Во сколько это обойдется?');
 // console.log('Цель будет достигнута за: ', Math.ceil(+missionFill));
 
 let accumulatedMonth = function getAccumulatedMonth() {
-    return +money - +amount1 - +amount2;
+    return parseInt(money) - parseInt(amount1) - parseInt(amount2);
 };
 
 let budgetDay = accumulatedMonth() / 30;
@@ -53,14 +53,13 @@ switch (true){
 }
 
 function getExpensesMonth() {
-    return  amount1 + amount2;
+    return  parseInt(amount1)  + parseInt(amount2);
 }
-console.log(getExpensesMonth());
+console.log(+getExpensesMonth());
 
 
 function getTargetMonth() {
-    return Math.floor(mission / accumulatedMonth());
+    return Math.floor(parseInt(mission) / accumulatedMonth());
 }
 
 console.log(getTargetMonth());
-
