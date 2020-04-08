@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let income = 'фриланс',
  mission = 200000, period = 12;
@@ -6,6 +6,9 @@ let income = 'фриланс',
 let money = prompt('Ваш месячный доход');
 
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+
+
+console.log(addExpenses.split(', '));
 
 let deposit = confirm('Есть ли у вас депозит в банке?');
 
@@ -17,17 +20,19 @@ let amount1 = prompt('Во сколько это обойдется?');
 
 let amount2 = prompt('Во сколько это обойдется?');
 
-let budgetMonth = money - amount1 - amount2;
+// let budgetMonth = money - amount1 - amount2;
 
-console.log('Бюджет на месяц: ', budgetMonth);
+// console.log('Бюджет на месяц: ', budgetMonth);
 
-let missionFill = mission / budgetMonth;
+// let missionFill = mission / budgetMonth;
 
-console.log('Цель будет достигнута за: ', Math.ceil(+missionFill));
+// console.log('Цель будет достигнута за: ', Math.ceil(+missionFill));
 
-let budgetDay = +budgetMonth / 30;
+let accumulatedMonth = function getAccumulatedMonth() {
+    return +money - +amount1 - +amount2;
+};
 
-console.log(budgetDay);
+let budgetDay = accumulatedMonth() / 30;
 
 console.log('Дневной бюджет: ', Math.floor(budgetDay));
 
@@ -47,5 +52,15 @@ switch (true){
         break;
 }
 
+function getExpensesMonth() {
+    return  amount1 + amount2;
+}
+console.log(getExpensesMonth());
 
+
+function getTargetMonth() {
+    return Math.floor(mission / accumulatedMonth());
+}
+
+console.log(getTargetMonth());
 
