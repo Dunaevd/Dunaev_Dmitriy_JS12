@@ -30,7 +30,7 @@ let deposit = confirm('Есть ли у вас депозит в банке?');
 
  let expenses1, expenses2;
 
-let isNumber = (n) => !Number.isNaN(parseFloat(n)) && isFinite(n);
+let isNumber = (n) => !Number.isNaN(parseFloat(n)) && isFinite(n); //функция проверки на число
 
 let getExpensesMonth = () => {
     let sum = 0;
