@@ -72,7 +72,7 @@ let targetMonth = getTargetMonth();
 if (targetMonth < 0) {
     console.log('Цель не будет достигнута');
 } else if (targetMonth >= 0) {
-    console.log('Цель будет достигнута ' + Math.floor(getTargetMonth()));
+    console.log('Цель будет достигнута ' + Math.floor(targetMonth));
 }
 
 let budgetDay = accumulatedMonth / 30; //Дневной бюджет
