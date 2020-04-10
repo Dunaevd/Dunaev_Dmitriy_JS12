@@ -8,7 +8,7 @@ let money;
 let start = () =>{
 
      do { money = +prompt('Ваш месячный доход');
-        } while (isNaN(parseFloat(money)));    
+        } while (Number.isNaN(parseFloat(money)));    
 
 };
 start();
@@ -30,7 +30,7 @@ let deposit = confirm('Есть ли у вас депозит в банке?');
 
  let expenses1, expenses2;
 
-let isNumber = (n) => !isNaN(parseFloat(n)) && isFinite(n);
+let isNumber = (n) => !Number.isNaN(parseFloat(n)) && isFinite(n);
 
 let getExpensesMonth = () => {
     let sum = 0;
